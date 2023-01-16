@@ -8,9 +8,156 @@
     <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
     <title>Grid layout</title>
+    <style>
+        body {
+            display: grid;
+            /* grid-template-columns: repeat(12, 1fr); */
+            grid-template-areas:
+                "h h h h h h h h h h h h"
+                "m m m c c c c c c c a a"
+                "f f f f f f f f f f f f"
+            ;
+        }
+
+        .header {
+            grid-area: h;
+            background-color: aqua;
+        }
+
+        .mnu {
+            grid-area: m;
+            background-color: cadetblue;
+        }
+
+        .containt {
+            grid-area: c;
+            background-color: lightblue;
+        }
+
+        .aside {
+            grid-area: a;
+            background-color: darkgoldenrod;
+        }
+
+        .footer {
+            grid-area: f;
+            background-color: antiquewhite;
+        }
+
+        @media screen and (max-width:576px) {
+            body {
+                grid-template-areas:
+                    "h h h h h h h h h h h h"
+                    "m m m m m m m m m m m m"
+                    "c c c c c c c c c c c c"
+                    "a a a a a a a a a a a a"
+                    "f f f f f f f f f f f f"
+                ;
+            }
+        }
+
+        @media screen and (min-width:576px) and (max-width:768px) {
+            body {
+                grid-template-areas:
+                    "h h h h h h h h h h h h"
+                    "m m m m c c c c c c c c"
+                    "a a a a a a a a a a a a"
+                    "f f f f f f f f f f f f"
+                ;
+            }
+        }
+    </style>
 </head>
 
 <body>
+    <header class="header">
+        <h1>asdfghjkl;mn cv zc poiuwert </h1>
+    </header>
+    <nav class="mnu">
+        <ul>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+            <li>Home</li>
+        </ul>
+    </nav>
+
+    <main class="containt">
+        <section>
+            <article>
+                <p>Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit.
+                    Commodi obcaecati velit
+                    necessitatibus, delectus,
+                    nulla repudiandae dignissimos
+                    aperiam maxime quis sapiente
+                    eum iste deserunt facere culpa
+                    eius. Assumenda debitis
+                    numquam ipsum.</p>
+            </article>
+            <article>
+                <p>Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit.
+                    Commodi obcaecati velit
+                    necessitatibus, delectus,
+                    nulla repudiandae dignissimos
+                    aperiam maxime quis sapiente
+                    eum iste deserunt facere culpa
+                    eius. Assumenda debitis
+                    numquam ipsum.</p>
+            </article>
+            <article>
+                <p>Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit.
+                    Commodi obcaecati velit
+                    necessitatibus, delectus,
+                    nulla repudiandae dignissimos
+                    aperiam maxime quis sapiente
+                    eum iste deserunt facere culpa
+                    eius. Assumenda debitis
+                    numquam ipsum.</p>
+            </article>
+            <article>
+                <p>Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit.
+                    Commodi obcaecati velit
+                    necessitatibus, delectus,
+                    nulla repudiandae dignissimos
+                    aperiam maxime quis sapiente
+                    eum iste deserunt facere culpa
+                    eius. Assumenda debitis
+                    numquam ipsum.</p>
+            </article>
+            <article>
+                <p>Lorem ipsum dolor, sit amet
+                    consectetur adipisicing elit.
+                    Commodi obcaecati velit
+                    necessitatibus, delectus,
+                    nulla repudiandae dignissimos
+                    aperiam maxime quis sapiente
+                    eum iste deserunt facere culpa
+                    eius. Assumenda debitis
+                    numquam ipsum.</p>
+            </article>
+        </section>
+    </main>
+    <aside class="aside">
+        <div>
+            <p>Lorem ipsum dolor sit amet
+                consectetur, adipisicing elit.
+                Nobis consequatur modi at.
+                Quisquam omnis molestias
+                voluptatum sunt iusto magnam
+                temporibus, architecto
+                accusantium! Illo impedit cumque
+                dolorum modi voluptate molestias
+                necessitatibus?</p>
+        </div>
+    </aside>
+    <footer class="footer">
+        <p>Lorem ipsum dolor sit amet consectetur
+        </p>
+    </footer>
 
 </body>
 
